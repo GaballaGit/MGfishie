@@ -10,7 +10,7 @@ function draw() {
   background(17, 78, 117);
   bubbles.run();
   bubbles.origin = fish.getMouthPosition();
-  if (frameCount % 5 === 0) {
+  if (frameCount % 1 === 0) {
     bubbles.addParticle();
   }
   

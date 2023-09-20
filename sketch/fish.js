@@ -11,8 +11,8 @@ class Fish {
   }
 
   swim() {
-    this.position.x += random(-1.5, 1);
-    this.position.y += random(-1.5, 1);
+    this.position.x += random(-10, 10);
+    this.position.y += random(-10, 10);
   }
 
   display() {
@@ -38,6 +38,9 @@ class Fish {
     // Pupil
     fill(0, 0, 0);
     circle(this.position.x + this.width / 2 - 4, this.position.y - 10, 25);
+
+    //test
+    text("why", this.position.x, this.position.y, 20,20);
   }
 
   getMouthPosition() {
