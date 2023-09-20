@@ -1,8 +1,8 @@
 class Fish {
   constructor(position) {
     this.position = position.copy();
-    this.width = 100;
-    this.height = 60;
+    this.width = 200;
+    this.height = 10;
   }
 
   run() {
@@ -11,14 +11,14 @@ class Fish {
   }
 
   swim() {
-    this.position.x += random(-1, 1);
-    this.position.y += random(-1, 1);
+    this.position.x += random(-1.5, 1);
+    this.position.y += random(-1.5, 1);
   }
 
   display() {
     // Body
     noStroke();
-    fill(255, 191, 0);
+    fill(255, 125, 125);
     ellipse(this.position.x, this.position.y, this.width, this.height);
 
     // Tail
@@ -33,11 +33,11 @@ class Fish {
 
     // Eye
     fill(255, 255, 255);
-    circle(this.position.x + this.width / 2 - 10, this.position.y - 10, 20);
+    circle(this.position.x + this.width / 2 - 10, this.position.y - 10, 40);
 
     // Pupil
     fill(0, 0, 0);
-    circle(this.position.x + this.width / 2 - 10, this.position.y - 10, 8);
+    circle(this.position.x + this.width / 2 - 4, this.position.y - 10, 25);
   }
 
   getMouthPosition() {
